@@ -9,19 +9,31 @@
 /* Begin PBXBuildFile section */
 		0E14C5122838194400A02245 /* GroceryListCoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C5022838194300A02245 /* GroceryListCoreDataApp.swift */; };
 		0E14C5132838194400A02245 /* GroceryListCoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C5022838194300A02245 /* GroceryListCoreDataApp.swift */; };
-		0E14C5142838194400A02245 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C5032838194300A02245 /* ContentView.swift */; };
-		0E14C5152838194400A02245 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C5032838194300A02245 /* ContentView.swift */; };
+		0E14C5142838194400A02245 /* CurrentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C5032838194300A02245 /* CurrentListView.swift */; };
+		0E14C5152838194400A02245 /* CurrentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C5032838194300A02245 /* CurrentListView.swift */; };
 		0E14C5162838194400A02245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E14C5042838194400A02245 /* Assets.xcassets */; };
 		0E14C5172838194400A02245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E14C5042838194400A02245 /* Assets.xcassets */; };
+		0E14C522283819E500A02245 /* GroceryListCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C520283819E500A02245 /* GroceryListCoreData.xcdatamodeld */; };
+		0E14C523283819E500A02245 /* GroceryListCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C520283819E500A02245 /* GroceryListCoreData.xcdatamodeld */; };
+		0E14C52528381BA000A02245 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C52428381BA000A02245 /* DataController.swift */; };
+		0E14C52628381BA000A02245 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C52428381BA000A02245 /* DataController.swift */; };
+		0E14C528283DA03800A02245 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C527283DA03800A02245 /* AddItemView.swift */; };
+		0E14C529283DA03800A02245 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C527283DA03800A02245 /* AddItemView.swift */; };
+		0E14C52B283DCF8F00A02245 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C52A283DCF8F00A02245 /* ListView.swift */; };
+		0E14C52C283DCF8F00A02245 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14C52A283DCF8F00A02245 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E14C5022838194300A02245 /* GroceryListCoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListCoreDataApp.swift; sourceTree = "<group>"; };
-		0E14C5032838194300A02245 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0E14C5032838194300A02245 /* CurrentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentListView.swift; sourceTree = "<group>"; };
 		0E14C5042838194400A02245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E14C5092838194400A02245 /* GroceryListCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryListCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E14C50F2838194400A02245 /* GroceryListCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryListCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E14C5112838194400A02245 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		0E14C521283819E500A02245 /* GroceryListCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GroceryListCoreData.xcdatamodel; sourceTree = "<group>"; };
+		0E14C52428381BA000A02245 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		0E14C527283DA03800A02245 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		0E14C52A283DCF8F00A02245 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +67,11 @@
 			isa = PBXGroup;
 			children = (
 				0E14C5022838194300A02245 /* GroceryListCoreDataApp.swift */,
-				0E14C5032838194300A02245 /* ContentView.swift */,
+				0E14C52A283DCF8F00A02245 /* ListView.swift */,
+				0E14C5032838194300A02245 /* CurrentListView.swift */,
+				0E14C520283819E500A02245 /* GroceryListCoreData.xcdatamodeld */,
+				0E14C52428381BA000A02245 /* DataController.swift */,
+				0E14C527283DA03800A02245 /* AddItemView.swift */,
 				0E14C5042838194400A02245 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -176,8 +192,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E14C5142838194400A02245 /* ContentView.swift in Sources */,
+				0E14C522283819E500A02245 /* GroceryListCoreData.xcdatamodeld in Sources */,
+				0E14C52528381BA000A02245 /* DataController.swift in Sources */,
+				0E14C52B283DCF8F00A02245 /* ListView.swift in Sources */,
+				0E14C5142838194400A02245 /* CurrentListView.swift in Sources */,
 				0E14C5122838194400A02245 /* GroceryListCoreDataApp.swift in Sources */,
+				0E14C528283DA03800A02245 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E14C5152838194400A02245 /* ContentView.swift in Sources */,
+				0E14C523283819E500A02245 /* GroceryListCoreData.xcdatamodeld in Sources */,
+				0E14C52628381BA000A02245 /* DataController.swift in Sources */,
+				0E14C52C283DCF8F00A02245 /* ListView.swift in Sources */,
+				0E14C5152838194400A02245 /* CurrentListView.swift in Sources */,
 				0E14C5132838194400A02245 /* GroceryListCoreDataApp.swift in Sources */,
+				0E14C529283DA03800A02245 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +476,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0E14C520283819E500A02245 /* GroceryListCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0E14C521283819E500A02245 /* GroceryListCoreData.xcdatamodel */,
+			);
+			currentVersion = 0E14C521283819E500A02245 /* GroceryListCoreData.xcdatamodel */;
+			path = GroceryListCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0E14C4FD2838194300A02245 /* Project object */;
 }
