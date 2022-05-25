@@ -29,7 +29,7 @@ struct ListView: View {
                     
                 } else if listSelected != 0 {
                     
-                    CurrentListView()
+                    AllListsView()
                 }
             }.navigationTitle("")
                 .navigationBarHidden(true)
