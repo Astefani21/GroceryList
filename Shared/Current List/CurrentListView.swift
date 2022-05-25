@@ -20,14 +20,29 @@ struct CurrentListView: View {
     //@State private var collapsed: Bool = true
     @State private var addItemCollapsed: Bool = false
     
+    
+    
     var body: some View {
         NavigationView{
             VStack{
                 HStack{
+                    Button {
+                        
+                    } label: {
+                        Text("Save List")
+                            .foregroundColor(.white)
+                            .bold()
+                            .padding(5)
+                            .padding(.horizontal)
+                            .background(RoundedRectangle(cornerRadius: 10).fill(.red))
+                            
+                            
+                    }
+                    
                     Spacer()
                     
                     EditButton()
-                        .foregroundColor(.red)
+                        .foregroundColor(.black)
                 }
                 .padding(.horizontal)
                 
@@ -43,19 +58,7 @@ struct CurrentListView: View {
             }
             .navigationTitle("")
             .navigationBarHidden(true)
-            .overlay(alignment: .bottomTrailing) {
-                Button {
-                    
-                } label: {
-                    Text("Save List")
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 10).fill(.red))
-                        .shadow(radius: 10)
-                }
-                .padding()
-                
-            }
+        
            
 //            .sheet(isPresented: $showingAddScreen) {
 //                AddItemView()

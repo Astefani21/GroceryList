@@ -19,84 +19,113 @@ struct AddItemView: View {
     
     
     @State private var addItemCollapsed: Bool = false
+    @State private var animationAmount = 2.0
     
     var body: some View {
         
         VStack{
             Button {
                 self.addItemCollapsed.toggle()
+                animationAmount += 1
+               
             } label: {
                 HStack {
                     Text("Add Item")
-                    Image(systemName: self.addItemCollapsed ? "chevron.right" : "chevron.down")
                     Spacer()
+                    Image(systemName: self.addItemCollapsed ? "chevron.right" : "chevron.down")
+                    
                 }
+                .foregroundColor(.red)
+                .padding()
+                
+                
             }
-            .foregroundColor(.gray)
-            .padding(3)
+            .padding(5)
+            
             
             if !addItemCollapsed {
-                Form{
-                        TextField("Name", text: $name)
-                        HStack {
-                            Text("Price:")
-                                .font(.caption)
-                                .foregroundColor(.gray)
-                            TextField("Price", value: $price, format: .currency(code: Locale.current.currencyCode ?? "USD"))
-                        }
-                        HStack {
-                            Text("Quantity:")
-                                .font(.caption)
-                                .foregroundColor(.gray)
-                            TextField("Quantity", value: $quantity, format: .number)
-                        }
-                        HStack {
-                            Text("Aisle:")
-                                .font(.caption)
-                                .foregroundColor(.gray)
-                            TextField("Aisle", value: $aisle, format: .number)
-                        }
-                    if name == "" {
-                        Section{
-                            Button {
-                            } label: {
-                                HStack{
-                                    Spacer()
-                                    Text("Add Item")
-                                        .foregroundColor(.gray)
-                                    Spacer()
-                                }
-                            }
-
-                        }
-                    } else {
-                        Section{
-                            Button {
-                                let newItem = ListItems(context: moc)
-                                newItem.id = UUID()
-                                newItem.item = name
-                                newItem.price = price
-                                newItem.aisle = Int64(aisle)
-                                newItem.quantity = quantity
-                                
-                                try? moc.save()
-                                dismiss()
-                            } label: {
-                                HStack{
-                                    Spacer()
-                                    Text("Add Item")
-                                        .foregroundColor(.red)
-                                        .bold()
-                                    Spacer()
-                                }
-                            }
-
-                        }
+                VStack (alignment: .leading ) {
+                    TextField("Name", text: $name)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 10).fill(.white))
+                        .padding(.horizontal)
+                    HStack {
+                        Text("Price:")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                        TextField("Price", value: $price, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                     }
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).fill(.white))
+                    .padding(.horizontal)
+                    HStack {
+                        Text("Quantity:")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                        TextField("Quantity", value: $quantity, format: .number)
+                    }
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).fill(.white))
+                    .padding(.horizontal)
+                    HStack {
+                        Text("Aisle:")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                        TextField("Aisle", value: $aisle, format: .number)
+                    }
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).fill(.white))
+                    .padding(.horizontal)
+                if name == "" {
                     
+                        Button {
+                        } label: {
+                            HStack{
+                                Spacer()
+                                Text("Add")
+                                    .foregroundColor(.gray).opacity(0.2)
+                                    
+                                Spacer()
+                            }
+                            .padding()
+                            .background(RoundedRectangle(cornerRadius: 10).fill(.white))
+                            .padding()
+                        }
+
+                    
+                } else {
+                        Button {
+                            let newItem = ListItems(context: moc)
+                            newItem.id = UUID()
+                            newItem.item = name
+                            newItem.price = price
+                            newItem.aisle = Int64(aisle)
+                            newItem.quantity = quantity
+                            
+                            try? moc.save()
+                            dismiss()
+                        } label: {
+                            HStack{
+                                Spacer()
+                                Text("Add")
+                                    .foregroundColor(.white)
+                                    .bold()
+                                Spacer()
+                                 
+                            }
+                            .padding()
+                            .background(RoundedRectangle(cornerRadius: 10).fill(.red))
+                            .padding()
+                        }
+
+                }
+
                 }
             }
         }
+        .background(RoundedRectangle(cornerRadius: 10).fill(.red).opacity(0.2))
+        .padding(.horizontal)
+        .animation(.default, value: animationAmount)
     }
 }
 

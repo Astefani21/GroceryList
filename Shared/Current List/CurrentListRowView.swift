@@ -16,6 +16,7 @@ struct CurrentListRowView: View {
         VStack {
             Button {
                 self.collapsed.toggle()
+                
             } label: {
                 HStack {
                     Image(systemName: self.collapsed ? "chevron.right" : "chevron.down")
