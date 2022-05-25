@@ -18,6 +18,8 @@ struct AddItemView: View {
     @State private var quantity = 1.0
     
     
+    
+    
     var body: some View {
         //NavigationView{
             Form{
